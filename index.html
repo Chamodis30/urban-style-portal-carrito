@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Style | Portal y carrito de compras</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- async para que no bloquee el renderizado -->
+     <script src="https://example.com/analytic.js" async></script>
+
+     <!-- defer para ejecutarse cuando el DOM este disponible -->
+      <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="site header">
+        <div class="brand">
+            <h1>Urban Style</h1>
+            <p>Moda urbana y accesorios</p>
+        </div>
+        <div id="session-info" class="session-info" aria-live="polite"></div>
+    </header>
+
+    <main>
+
+        <section class="banner" aria-labelledby="flash-title">
+            <h2 id="flash-title">Oferta Relampago</h2>
+            <p>Descuento exclusivo por tiempo limitado.</p>
+            <button id="flash-btn" type="button">Activar Oferta Relampago</button>
+            <p id="flash-counter" class="counter" aria-live="polite">15s</p>
+            <p id="flash-message" class="message" role="status"></p>
+        </section>
+
+        <section class="catalog" aria-labelledby="catalog-title">
+            <h2 id="catalog-title">Catalogo</h2>
+            <div id="catalog-list" class="cards"></div>
+        </section>
+
+        <section class="cart" aria-labelledby="cart-title">
+            <h2 id="cart-title">Desglose de compra</h2>
+            <div id="cart-summary"></div>
+        </section>
+
+        <section class="reviews" aria-labelledby="reviews-title">
+            <h2></h2>
+        </section>
+    </main>
+</body>
+</html>
