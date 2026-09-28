@@ -44,8 +44,27 @@
         </section>
 
         <section class="reviews" aria-labelledby="reviews-title">
-            <h2></h2>
+            <h2 id="reviews-title">Opiniones de productos</h2>
+
+            <form id="review-form">
+                <label for="review-text">Tu reseña</label>
+                <textarea 
+                    id="review-text"
+                    required
+                    maxlength="500"
+                    placeholder="Escribe tu opinion sobre una prenda..."
+                ></textarea>
+                <button type="submit">Enviar reseña</button>
+            </form>
+
+            <div id="reviews-list" class="reviews-list"></div>
         </section>
+
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Urban Style. Proyecto MVP Front-End.</p>
+    </footer>
+    
 </body>
 </html>
