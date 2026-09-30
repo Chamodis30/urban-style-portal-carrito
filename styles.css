@@ -1,0 +1,125 @@
+:root {
+    --color-fondo: #f5f3ef;
+    --color-superficie: #ffffff;
+    --color-principal: #111111;
+    --color-acento: #c9a227;
+    --color-acento-suave: #f4e7b3;
+    --color-texto: #1f1f1f;
+    --color-texto-suave: #6b6b6b;
+    --color-borde: #e3ded6;
+    --sombra: 0 10px 30px rgba(17, 17, 17, 0.08);
+    --radio: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #fff7dc 0, transparent 35%),
+        var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem clamp(1rem, 4vw, 4rem);
+    background: var(--color-principal);
+    color: #ffffff;
+    border-bottom: 4px solid var(--color-acento);
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: 0.05em;
+}
+
+.brand p {
+    margin: 0.2rem 0 0;
+    color: #d8d8d8;
+}
+
+.session-info {
+    max-width: 720px;
+    font-size: 0.9rem;
+    color: #f0e6c8;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+main {
+    width: min(1180px, 92vw);
+    margin: 2rem auto 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+section {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: clamp(1.2rem, 3vw, 2rem);
+    box-shadow: var(--sombra);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: var(--color-principal);
+}
+
+.banner {
+    background:
+        linear-gradient(135deg, #111111 0%, #2b2b2b 55%, #4a3b0d 100%);
+        color: #ffffff;
+        border: none;
+}
+
+.banner h2, .banner p {
+    color: #ffffff;
+}
+
+.counter {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin: 1rem 0 0.5rem;
+    color: var(--color-acento-suave);
+}
+
+.message {
+    min-height: 1.5rem;
+    font-weight: 600;
+    color: var(--color-acento-suave);
+}
+
+button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--color-acento);
+    color: #111111;
+    transition: transform 0.2s ease, box-shadow 0.2 ease, opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(201, 162, 39, 0.35);
+}
+
+button:disabled {
+    
+}
